@@ -11,7 +11,7 @@
 	"license": "MIT",
 	"autoload": {
 		"classmap": [
-			"src/Ums.php"
+			"src"
 		],
 		"psr-4": {
 			"AliPay\\": "src/AliPay",
@@ -22,7 +22,7 @@
 	"extra": {
 		"think": {
 			"services": [
-				"Gavin\\Chinaums\\Service"
+				"Service"
 			],
 			"config": {
 				"chinaums": "config/config.php"

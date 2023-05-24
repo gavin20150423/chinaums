@@ -3,6 +3,10 @@
 use Contracts\DataArray;
 use Exceptions\InvalidInstanceException;
 
+/**
+ * ----- WePay -----
+ * @method \WePay\Order WePayOrder($options = []) static 发起微信支付
+ */
 class Ums
 {
     /**
@@ -33,10 +37,10 @@ class Ums
     {
         if (substr($name, 0, 6) === 'UacPay') {
             $class = 'UacPay\\' . substr($name, 6);
-        } elseif (substr($name, 0, 6) === 'WePay') {
-            $class = 'WePay\\' . substr($name, 6);
         } elseif (substr($name, 0, 6) === 'AliPay') {
             $class = 'AliPay\\' . substr($name, 6);
+        } elseif (substr($name, 0, 5) === 'WePay') {
+            $class = 'WePay\\' . substr($name, 5);
         }
         if (!empty($class) && class_exists($class)) {
             $option = array_shift($arguments);
