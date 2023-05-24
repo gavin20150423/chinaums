@@ -1,0 +1,39 @@
+{
+	"name": "gavin/chinaums",
+	"description": "银商支付相关接口",
+	"type": "library",
+	"require": {
+		"php": "^7.0",
+		"topthink/framework": "^5.1.10 || ^6.0.0",
+		"guzzlehttp/guzzle": "^7.5",
+		"ext-json": "*"
+	},
+	"license": "MIT",
+	"autoload": {
+		"classmap": [
+			"src/Ums.php"
+		],
+		"psr-4": {
+			"AliPay\\": "src/AliPay",
+			"WePay\\": "src/WePay",
+			"UacPay\\": "src/UacPay"
+		}
+	},
+	"extra": {
+		"think": {
+			"services": [
+				"Gavin\\Chinaums\\Service"
+			],
+			"config": {
+				"chinaums": "config/config.php"
+			}
+		}
+	},
+	"authors": [
+		{
+			"name": "gavin",
+			"email": "guochangrong2833@163.com"
+		}
+	],
+	"minimum-stability": "dev"
+}
