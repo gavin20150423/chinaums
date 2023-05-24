@@ -35,6 +35,11 @@ composer update gavin/chinaums
 include "您的目录/ChinaUms/include.php";
 ```
 
+1.3 如果使用的是thinkphp6，发布配置文件到config
+```shell
+php think ums:create
+```
+
 微信支付
 ---
 

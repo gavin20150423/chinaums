@@ -25,7 +25,7 @@
 				"Service"
 			],
 			"config": {
-				"chinaums": "config/config.php"
+				"ums": "config/config.php"
 			}
 		}
 	},
