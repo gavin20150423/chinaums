@@ -35,4 +35,24 @@ class Pay extends BasicWePay
     {
         return Order::instance($this->config->get())->close($out_trade_no);
     }
+
+    /**
+     * 申请退款
+     * @param array $options
+     * @return mixed
+     */
+    public function createRefund(array $options)
+    {
+        return Refund::instance($this->config->get())->create($options);
+    }
+
+    /**
+     * 查询退款
+     * @param array $options
+     * @return mixed
+     */
+    public function queryRefund(array $options)
+    {
+        return Refund::instance($this->config->get())->query($options);
+    }
 }

@@ -141,7 +141,7 @@ class BasicWePay
             if (in_array($rs['errCode'], ['SUCCESS', '0000'])) {
                 return $rs;
             }
-            throw new InvalidResponseException($rs['errInfo'] ?? '请求失败');
+            throw new InvalidResponseException(json_encode($rs, 256));
         } catch (\Exception $exception) {
             throw new InvalidResponseException($exception->getMessage(), $exception->getCode());
         }
