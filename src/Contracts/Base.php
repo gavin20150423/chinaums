@@ -113,6 +113,6 @@ class Base
     public function delAccessToken(): bool
     {
         $this->access_token = '';
-        return Tools::delCache($this->config->get('appid') . '_access_token');
+        return Tools::delCache($this->config->get('appid') . '_ums_access_token');
     }
 }
