@@ -142,7 +142,7 @@ class BasicWePay
                 return $rs;
             }
             throw new InvalidResponseException($rs['errInfo'] ?? '请求失败');
-        } catch (InvalidResponseException $exception) {
+        } catch (\Exception $exception) {
             throw new InvalidResponseException($exception->getMessage(), $exception->getCode());
         }
     }
