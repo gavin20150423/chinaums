@@ -1,6 +1,6 @@
 <?php
 
-namespace WePay;
+namespace Gavin\Ums\WePay;
 
 use Contracts\BasicWePay;
 

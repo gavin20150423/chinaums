@@ -53,7 +53,7 @@ try {
     $config = include "../config/config.php";
 
     //3. 创建接口实例
-    $ums = \WePay\Pay::instance($config);
+    $ums = \Gavin\Ums\WePay\Pay::instance($config);
 
     //4. 组装参数，可以参考官方文档
     $options = [

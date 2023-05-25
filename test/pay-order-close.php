@@ -9,7 +9,7 @@ try {
     $config = include "../config/config.php";
 
     //3. 创建接口实例
-    $ums = \WePay\Pay::instance($config);
+    $ums = \Gavin\Ums\WePay\Pay::instance($config);
 
     // 取消订单
     $result = $ums->closeOrder("34TJ1684931062");

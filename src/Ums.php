@@ -5,7 +5,7 @@ use Exceptions\InvalidInstanceException;
 
 /**
  * ----- WePay -----
- * @method \WePay\Order WePayOrder($options = []) static 发起微信支付
+ * @method \Gavin\Ums\WePay\Order WePayOrder($options = []) static 发起微信支付
  */
 class Ums
 {

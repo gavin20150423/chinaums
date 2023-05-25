@@ -14,9 +14,9 @@
 			"src"
 		],
 		"psr-4": {
-			"AliPay\\": "src/AliPay",
-			"WePay\\": "src/WePay",
-			"UacPay\\": "src/UacPay"
+			"Gavin\\Ums\\AliPay\\": "src/AliPay",
+			"Gavin\\Ums\\WePay\\": "src/WePay",
+			"Gavin\\Ums\\UacPay\\": "src/UacPay"
 		}
 	},
 	"extra": {
