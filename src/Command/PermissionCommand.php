@@ -13,8 +13,8 @@ class PermissionCommand extends \think\console\Command
     public function configure()
     {
         $this->setName('ums:cache')
-            ->addOption('user', 'u', Option::VALUE_OPTIONAL, 'set cache user')
-            ->addOption('dir', 'd', Option::VALUE_OPTIONAL, 'set cache permission')
+            ->addOption('user', 'u', Option::VALUE_REQUIRED, 'set cache user')
+            ->addOption('dir', 'd', Option::VALUE_NONE, 'set cache permission')
             ->setDescription('set china ums cache');
     }
 
@@ -31,9 +31,9 @@ class PermissionCommand extends \think\console\Command
         }
 
         if ($dir) {
-            $rs = chmod($cacheDir, $dir);
+            $rs = chmod($cacheDir, 0777);
             if($rs){
-                $output->writeln($cacheDir . ' set chmod success: ' . $dir);
+                $output->writeln($cacheDir . ' set chmod success: 0777');
             }
         }
     }
