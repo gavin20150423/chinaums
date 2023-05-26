@@ -44,6 +44,11 @@ include "您的目录/ChinaUms/include.php";
 ```shell
 php think ums:create
 ```
+1.4 如果遇到缓存没有权限写入，可以执行
+```shell
+php think ums:cache -d #将cache目录改为0777
+php think ums:cache -u www:www #修改目录所有者为www
+```
 
 微信支付
 ---
