@@ -7,5 +7,5 @@
 .DS_Store
 user.code-workspace
 composer.lock
-cache/File
+/cache/*
 config/test_config.php
