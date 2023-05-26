@@ -144,7 +144,7 @@ class Tools
             self::$cache_path = dirname(dirname(__DIR__)) . DIRECTORY_SEPARATOR . 'Cache' . DIRECTORY_SEPARATOR;
         }
         self::$cache_path = rtrim(self::$cache_path, '/\\') . DIRECTORY_SEPARATOR;
-        file_exists(self::$cache_path) || mkdir(self::$cache_path, 0755, true);
+        file_exists(self::$cache_path) || mkdir(self::$cache_path, 0777, true);
         return self::$cache_path . $name;
     }
 }
