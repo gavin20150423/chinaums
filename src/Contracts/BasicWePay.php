@@ -10,8 +10,6 @@ use Exceptions\LocalCacheException;
 use GuzzleHttp\Client;
 use GuzzleHttp\Exception\GuzzleException;
 
-date_default_timezone_set('PRC');
-
 /**
  * 微信支付基础类
  * Class BasicPay

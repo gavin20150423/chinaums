@@ -4,8 +4,6 @@ namespace Contracts;
 
 use Exceptions\InvalidArgumentException;
 
-date_default_timezone_set('PRC');
-
 class Base
 {
     /**
