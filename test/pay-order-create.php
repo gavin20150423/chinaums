@@ -1,5 +1,5 @@
 <?php
-
+date_default_timezone_set("PRC");
 try {
     include "../vendor/autoload.php";
     // 1. 手动加载入口文件
