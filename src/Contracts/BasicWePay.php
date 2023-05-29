@@ -58,8 +58,7 @@ class BasicWePay
         $this->params = new DataArray([
             'mid' => $this->config->get('mid'),
             'tid' => $this->config->get('tid'),
-            'instMid' => $this->config->get('instmid'),
-            'requestTimestamp' => date('Y-m-d H:i:s')
+            'instMid' => $this->config->get('instmid')
         ]);
         // 商户参数支持
         if ($this->config->get('sub_appid')) {
@@ -132,6 +131,7 @@ class BasicWePay
         $client = new Client();
         try {
             $params = $this->params->merge($data);
+            $params['requestTimestamp'] = date('Y-m-d H:i:s');
             $params['sign'] = $this->getPaySign($params);
             $options['json'] = $params;
             $response = $client->post($url, $options)->getBody()->getContents();
