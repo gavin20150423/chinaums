@@ -16,6 +16,15 @@ class Pay extends BasicWePay
         return Order::instance($this->config->get())->create($options);
     }
 
+     /**
+     * @param array $options
+     * @return mixed
+     */
+    public function createQRCodeOrder(array $options)
+    {
+        return Order::instance($this->config->get())->createQrCode($options);
+    }
+
     /**
      * 查询订单
      * @param array $options
