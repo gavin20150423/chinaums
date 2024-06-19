@@ -25,12 +25,12 @@ class Order extends BasicWePay
     }
     public function createQrCode(array $options)
     {
-        if ($this->config->get('msgsrcid')) {
-            //如果商户订单号不包含指定前缀 则增加前缀
-            if (!strstr($options['merOrderId'], $this->config->get('msgsrcid'))) {
-                $options['merOrderId'] = $this->config->get('msgsrcid') . $options['merOrderId'];
-            }
-        }
+        // if ($this->config->get('msgsrcid')) {
+        //     //如果商户订单号不包含指定前缀 则增加前缀
+        //     if (!strstr($options['merOrderId'], $this->config->get('msgsrcid'))) {
+        //         $options['merOrderId'] = $this->config->get('msgsrcid') . $options['merOrderId'];
+        //     }
+        // }
         $url = 'https://api-mop.chinaums.com/v1/netpay/bills/get-qrcode';
         return $this->callPostApi($url, $options, true);
     }
