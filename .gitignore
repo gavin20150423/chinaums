@@ -1,5 +1,6 @@
 /.idea
 /.vscode
+.cursor
 *.log
 .env
 /runtime

@@ -16,6 +16,16 @@ class Pay extends BasicWePay
         return Order::instance($this->config->get())->create($options);
     }
 
+    /**
+     * 创建APP支付订单
+     * @param array $options
+     * @return mixed
+     */
+    public function createAppOrder(array $options)
+    {
+        return Order::instance($this->config->get())->createAppPay($options);
+    }
+
      /**
      * @param array $options
      * @return mixed

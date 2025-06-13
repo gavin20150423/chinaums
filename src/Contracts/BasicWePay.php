@@ -116,7 +116,7 @@ class BasicWePay
      * @throws GuzzleException
      * @throws InvalidResponseException
      */
-    protected function callPostApi($url, array $data, bool $needAuth = false)
+    protected function callPostApi($url, array $data, bool $needAuth = false, bool $needSign = true)
     {
         $options = [
             'headers' => [
@@ -132,7 +132,9 @@ class BasicWePay
         try {
             $params = $this->params->merge($data);
             $params['requestTimestamp'] = date('Y-m-d H:i:s');
-            $params['sign'] = $this->getPaySign($params);
+            if ($needSign) {
+                $params['sign'] = $this->getPaySign($params);
+            }
             $options['json'] = $params;
             $response = $client->post($url, $options)->getBody()->getContents();
             $rs = json_decode($response, true);
